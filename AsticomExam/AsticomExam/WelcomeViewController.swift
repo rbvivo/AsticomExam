@@ -38,6 +38,7 @@ class WelcomeViewController: UIViewController {
         button.setTitle("Register", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .blue
+        button.addTarget(self, action: #selector(registerPressed), for: .touchUpInside)
         return button
     }()
 
@@ -60,5 +61,10 @@ class WelcomeViewController: UIViewController {
     @objc private func loginPressed() {
         let loginController = LoginViewController()
         self.present(loginController, animated: true, completion: nil)
+    }
+    
+    @objc private func registerPressed() {
+        let registerController = RegisterViewController()
+        self.present(registerController, animated: true, completion: nil)
     }
 }
