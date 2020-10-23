@@ -15,6 +15,12 @@
 		1DCA9FBB2541D22E00E21A54 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA9FBA2541D22E00E21A54 /* LoginViewController.swift */; };
 		1DCA9FBE2541D23D00E21A54 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA9FBD2541D23D00E21A54 /* RegisterViewController.swift */; };
 		1DCA9FC22541D82200E21A54 /* FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA9FC12541D82200E21A54 /* FieldView.swift */; };
+		1DCA9FC9254274BC00E21A54 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA9FC8254274BC00E21A54 /* DashBoardViewController.swift */; };
+		1DCA9FDD254284A000E21A54 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA9FDC254284A000E21A54 /* UserInfoView.swift */; };
+		1DCA9FE025428A3000E21A54 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA9FDF25428A3000E21A54 /* DashboardViewModel.swift */; };
+		1DCAA01B2542BF5900E21A54 /* RewardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCAA01A2542BF5900E21A54 /* RewardCollectionViewCell.swift */; };
+		1DCAA0252542C13300E21A54 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCAA0242542C13300E21A54 /* Reward.swift */; };
+		1DCAA0292542CDC500E21A54 /* UIView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCAA0282542CDC500E21A54 /* UIView+Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		1DCA9FBA2541D22E00E21A54 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1DCA9FBD2541D23D00E21A54 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1DCA9FC12541D82200E21A54 /* FieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldView.swift; sourceTree = "<group>"; };
+		1DCA9FC8254274BC00E21A54 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
+		1DCA9FDC254284A000E21A54 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		1DCA9FDF25428A3000E21A54 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		1DCAA01A2542BF5900E21A54 /* RewardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardCollectionViewCell.swift; sourceTree = "<group>"; };
+		1DCAA0242542C13300E21A54 /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
+		1DCAA0282542CDC500E21A54 /* UIView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Reusable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,15 +74,77 @@
 			children = (
 				1DCA9F9E2541BB4000E21A54 /* AppDelegate.swift */,
 				1DCA9FA02541BB4000E21A54 /* SceneDelegate.swift */,
-				1DCA9FB42541C0B600E21A54 /* WelcomeViewController.swift */,
-				1DCA9FBA2541D22E00E21A54 /* LoginViewController.swift */,
-				1DCA9FBD2541D23D00E21A54 /* RegisterViewController.swift */,
-				1DCA9FC12541D82200E21A54 /* FieldView.swift */,
+				1DCAA0222542C11500E21A54 /* Models */,
+				1DCAA0212542C10200E21A54 /* Views */,
+				1DCAA01D2542C0E800E21A54 /* ViewControllers */,
 				1DCA9FA72541BB4400E21A54 /* Assets.xcassets */,
 				1DCA9FA92541BB4400E21A54 /* LaunchScreen.storyboard */,
 				1DCA9FAC2541BB4400E21A54 /* Info.plist */,
 			);
 			path = AsticomExam;
+			sourceTree = "<group>";
+		};
+		1DCA9FC42542748000E21A54 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA9FB42541C0B600E21A54 /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		1DCA9FC52542748C00E21A54 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA9FBA2541D22E00E21A54 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1DCA9FC62542749500E21A54 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA9FBD2541D23D00E21A54 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		1DCA9FC72542749F00E21A54 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA9FC8254274BC00E21A54 /* DashBoardViewController.swift */,
+				1DCA9FDF25428A3000E21A54 /* DashboardViewModel.swift */,
+				1DCAA01A2542BF5900E21A54 /* RewardCollectionViewCell.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		1DCAA01D2542C0E800E21A54 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA9FC42542748000E21A54 /* Welcome */,
+				1DCA9FC52542748C00E21A54 /* Login */,
+				1DCA9FC62542749500E21A54 /* Register */,
+				1DCA9FC72542749F00E21A54 /* Dashboard */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1DCAA0212542C10200E21A54 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA9FC12541D82200E21A54 /* FieldView.swift */,
+				1DCA9FDC254284A000E21A54 /* UserInfoView.swift */,
+				1DCAA0282542CDC500E21A54 /* UIView+Reusable.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1DCAA0222542C11500E21A54 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1DCAA0242542C13300E21A54 /* Reward.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +219,15 @@
 				1DCA9FBB2541D22E00E21A54 /* LoginViewController.swift in Sources */,
 				1DCA9FC22541D82200E21A54 /* FieldView.swift in Sources */,
 				1DCA9FBE2541D23D00E21A54 /* RegisterViewController.swift in Sources */,
+				1DCAA0292542CDC500E21A54 /* UIView+Reusable.swift in Sources */,
+				1DCA9FE025428A3000E21A54 /* DashboardViewModel.swift in Sources */,
+				1DCAA0252542C13300E21A54 /* Reward.swift in Sources */,
+				1DCA9FDD254284A000E21A54 /* UserInfoView.swift in Sources */,
+				1DCA9FC9254274BC00E21A54 /* DashBoardViewController.swift in Sources */,
 				1DCA9FB52541C0B600E21A54 /* WelcomeViewController.swift in Sources */,
 				1DCA9F9F2541BB4000E21A54 /* AppDelegate.swift in Sources */,
 				1DCA9FA12541BB4000E21A54 /* SceneDelegate.swift in Sources */,
+				1DCAA01B2542BF5900E21A54 /* RewardCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

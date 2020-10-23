@@ -67,4 +67,9 @@ class WelcomeViewController: UIViewController {
         let registerController = RegisterViewController()
         self.present(registerController, animated: true, completion: nil)
     }
+    
+    @objc private func goToDashboard() {
+       /* let dashboardController = DashBoardViewController(viewModel: viewmodel )
+        self.navigationController?.pushViewController(dashboardController, animated: true)*/
+    }
 }
