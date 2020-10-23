@@ -49,7 +49,7 @@ class RewardCollectionViewCell: UICollectionViewCell {
                 rewardTitle.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
             ])
         }
-        
+        rewardImage.image = nil
         rewardTitle.text = reward.name
         if let url = URL(string: reward.image) {
             viewModel.loadImage(imageURL: url)

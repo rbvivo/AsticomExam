@@ -16,7 +16,7 @@ class DashBoardViewController: UIViewController {
         flowLayout.minimumLineSpacing = 8
         flowLayout.minimumInteritemSpacing = 4
         flowLayout.estimatedItemSize = CGSize(width: 320, height: 200)
-        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        flowLayout.sectionInset = UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 8)
         return flowLayout
 
     }()
