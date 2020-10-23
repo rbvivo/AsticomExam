@@ -39,6 +39,16 @@ class FieldView: UIView {
         return toolbar
     }()
     
+    private lazy var toggleSecureButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Show", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        button.addTarget(self, action: #selector(toggleSecureTextField), for: .touchUpInside)
+        return button
+    }()
+    
     
     init(placeHolder: String = "", keyboardType: UIKeyboardType = .default, isSecure: Bool = false) {
         self.placeHolder = placeHolder
@@ -63,12 +73,20 @@ class FieldView: UIView {
         lineView.backgroundColor = .gray
         
         self.addSubview(textField)
+        self.addSubview(toggleSecureButton)
         self.addSubview(lineView)
         
+        if !isSecure {
+            toggleSecureButton.isHidden = true
+        }
+        
         NSLayoutConstraint.activate([
-            textField.topAnchor.constraint(equalTo: self.topAnchor),
+            textField.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
             textField.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            textField.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            textField.trailingAnchor.constraint(equalTo: toggleSecureButton.leadingAnchor, constant: -10),
+            
+            toggleSecureButton.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            toggleSecureButton.centerYAnchor.constraint(equalTo: textField.centerYAnchor),
             
             lineView.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 20),
             lineView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
@@ -82,6 +100,15 @@ class FieldView: UIView {
         textField.resignFirstResponder()
     }
     
+    @objc private func toggleSecureTextField() {
+        textField.isSecureTextEntry = !textField.isSecureTextEntry
+        
+        if textField.isSecureTextEntry {
+            toggleSecureButton.setTitle("Show", for: .normal)
+        } else {
+            toggleSecureButton.setTitle("Hide", for: .normal)
+        }
+    }
     
 }
 
