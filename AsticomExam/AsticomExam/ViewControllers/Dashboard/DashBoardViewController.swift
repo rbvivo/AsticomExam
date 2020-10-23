@@ -32,7 +32,7 @@ class DashBoardViewController: UIViewController {
     }()
     
     private lazy var userInfoView: UserInfoView = {
-        let view = UserInfoView(userName: viewModel.userName, mobileNumber: viewModel.mobileNumber, referalCode: viewModel.referalCode)
+        let view = UserInfoView(user: viewModel.user)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()

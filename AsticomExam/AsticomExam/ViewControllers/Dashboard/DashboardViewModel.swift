@@ -9,15 +9,11 @@ import Foundation
 
 class DashboardViewModel {
     
-    var userName: String
-    var mobileNumber: String
-    var referalCode: String
+    var user: User
     var rewardList: [Reward] = []
     
-    init(userName: String, mobileNumber: String, referalCode: String) {
-        self.userName = userName
-        self.mobileNumber = mobileNumber
-        self.referalCode = referalCode
+    init(user: User) {
+        self.user = user
         loadRewards()
     }
     

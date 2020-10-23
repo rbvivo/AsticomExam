@@ -9,6 +9,8 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
+    var registerSuccess: ((_ user: User) -> Void)?
+    
     private lazy var fieldStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -112,10 +114,50 @@ class RegisterViewController: UIViewController {
     
 
     @objc private func registerPressed() {
-       // self.dismiss(animated: true, completion: nil)
+        fieldCheck()
     }
     
     @objc private func backPressed() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    private func fieldCheck() {
+        var errorMessage = ""
+        
+        guard let firstNameText = firstNameField.textFieldText(),
+              let lastNameText = lastNameField.textFieldText(),
+              let mobileText = mobileNumberField.textFieldText(),
+              let mpinText = mpinField.textFieldText(),
+              let confirmMpinText = confirmMpinField.textFieldText(),
+              !firstNameText.isEmpty,
+              !lastNameText.isEmpty,
+              !mobileText.isEmpty,
+              !mpinText.isEmpty,
+              !confirmMpinText.isEmpty else {
+            errorMessage = "Fill all fields"
+            showAlert(errorMessage: errorMessage)
+            return
+        }
+        
+        if mobileText.count != 11 || !mobileText.hasPrefix("0") {
+            errorMessage = "Mobile Invalid Format"
+        } else if mpinText.count < 4 || confirmMpinText.count < 4 {
+            errorMessage = "MPIN Invalid Format"
+        } else if mpinText != confirmMpinText {
+            errorMessage = "MPIN doesn't match"
+        }
+        
+        if errorMessage != "" {
+            showAlert(errorMessage: errorMessage)
+        } else {
+            let user = User(id: "2", first_name: firstNameText, last_name: lastNameText, mobile: mobileText, is_verified: true, referral_code: "abc-defg-hi")
+            registerSuccess?(user)
+        }
+    }
+    
+    private func showAlert(errorMessage: String) {
+        let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }

@@ -9,6 +9,7 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
+    private let viewModel = WelcomeViewModel()
     private lazy var centerStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -28,7 +29,7 @@ class WelcomeViewController: UIViewController {
         button.setTitle("Login", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .blue
-        button.addTarget(self, action: #selector(goToDashboard), for: .touchUpInside)
+        button.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
         return button
     }()
     
@@ -60,16 +61,27 @@ class WelcomeViewController: UIViewController {
     
     @objc private func loginPressed() {
         let loginController = LoginViewController()
+        loginController.loginSuccess = { [weak self] in
+            if let user = self?.viewModel.loadUser() {
+                self?.dismiss(animated: true, completion: nil)
+                self?.goToDashboard(user: user)
+            }
+        }
+        
         self.present(loginController, animated: true, completion: nil)
     }
     
     @objc private func registerPressed() {
         let registerController = RegisterViewController()
+        registerController.registerSuccess = { [weak self] user in
+            self?.dismiss(animated: true, completion: nil)
+            self?.goToDashboard(user: user)
+        }
         self.present(registerController, animated: true, completion: nil)
     }
     
-    @objc private func goToDashboard() {
-        let dashboardController = DashBoardViewController(viewModel: DashboardViewModel(userName: "NAme", mobileNumber: "1111", referalCode: "1234") )
+    private func goToDashboard(user: User) {
+        let dashboardController = DashBoardViewController(viewModel: DashboardViewModel(user: user))
         self.navigationController?.pushViewController(dashboardController, animated: true)
     }
 }

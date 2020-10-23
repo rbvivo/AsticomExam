@@ -9,6 +9,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    var loginSuccess: (() -> Void)?
+    
     private lazy var fieldStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -91,11 +93,41 @@ class LoginViewController: UIViewController {
     }
     
     @objc private func loginPressed() {
-       // self.dismiss(animated: true, completion: nil)
+        fieldCheck()
     }
     
     @objc private func backPressed() {
         self.dismiss(animated: true, completion: nil)
     }
-
+    
+    private func fieldCheck() {
+        var errorMessage = ""
+        
+        guard let mobileText = mobileNumberField.textFieldText(),
+              let mpinText = mpinField.textFieldText(),
+              !mobileText.isEmpty,
+              !mpinText.isEmpty else {
+            errorMessage = "Fill all fields"
+            showAlert(errorMessage: errorMessage)
+            return
+        }
+        
+        if mobileText.count != 11 || !mobileText.hasPrefix("0") {
+            errorMessage = "Mobile Invalid Format"
+        } else if mpinText.count < 4 {
+            errorMessage = "MPIN Invalid Format"
+        }
+        
+        if errorMessage != "" {
+            showAlert(errorMessage: errorMessage)
+        } else {
+            loginSuccess?()
+        }
+    }
+    
+    private func showAlert(errorMessage: String) {
+        let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }

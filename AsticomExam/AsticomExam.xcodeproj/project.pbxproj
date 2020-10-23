@@ -26,6 +26,9 @@
 		1DCAA04425430CDC00E21A54 /* Rewards.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DCAA04325430CDC00E21A54 /* Rewards.plist */; };
 		1DCAA04925431F8000E21A54 /* RewardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCAA04825431F8000E21A54 /* RewardDetailsViewController.swift */; };
 		1DCAA04D2543204200E21A54 /* RewardDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCAA04C2543204200E21A54 /* RewardDetailsViewModel.swift */; };
+		1DCAA0502543286600E21A54 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCAA04F2543286600E21A54 /* User.swift */; };
+		1DCAA0532543295300E21A54 /* User.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DCAA0522543295200E21A54 /* User.plist */; };
+		1DCAA05625432A9300E21A54 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCAA05525432A9300E21A54 /* WelcomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		1DCAA04325430CDC00E21A54 /* Rewards.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Rewards.plist; sourceTree = "<group>"; };
 		1DCAA04825431F8000E21A54 /* RewardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardDetailsViewController.swift; sourceTree = "<group>"; };
 		1DCAA04C2543204200E21A54 /* RewardDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardDetailsViewModel.swift; sourceTree = "<group>"; };
+		1DCAA04F2543286600E21A54 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1DCAA0522543295200E21A54 /* User.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = User.plist; sourceTree = "<group>"; };
+		1DCAA05525432A9300E21A54 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 				1DCA9FA92541BB4400E21A54 /* LaunchScreen.storyboard */,
 				1DCA9FAC2541BB4400E21A54 /* Info.plist */,
 				1DCAA04325430CDC00E21A54 /* Rewards.plist */,
+				1DCAA0522543295200E21A54 /* User.plist */,
 			);
 			path = AsticomExam;
 			sourceTree = "<group>";
@@ -100,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				1DCA9FB42541C0B600E21A54 /* WelcomeViewController.swift */,
+				1DCAA05525432A9300E21A54 /* WelcomeViewModel.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -156,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				1DCAA0242542C13300E21A54 /* Reward.swift */,
+				1DCAA04F2543286600E21A54 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -238,6 +247,7 @@
 				1DCA9FAB2541BB4400E21A54 /* LaunchScreen.storyboard in Resources */,
 				1DCA9FA82541BB4400E21A54 /* Assets.xcassets in Resources */,
 				1DCAA04425430CDC00E21A54 /* Rewards.plist in Resources */,
+				1DCAA0532543295300E21A54 /* User.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,12 +259,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DCA9FBB2541D22E00E21A54 /* LoginViewController.swift in Sources */,
+				1DCAA05625432A9300E21A54 /* WelcomeViewModel.swift in Sources */,
 				1DCA9FC22541D82200E21A54 /* FieldView.swift in Sources */,
 				1DCAA04925431F8000E21A54 /* RewardDetailsViewController.swift in Sources */,
 				1DCA9FBE2541D23D00E21A54 /* RegisterViewController.swift in Sources */,
 				1DCAA0292542CDC500E21A54 /* UIView+Reusable.swift in Sources */,
 				1DCA9FE025428A3000E21A54 /* DashboardViewModel.swift in Sources */,
 				1DCAA0252542C13300E21A54 /* Reward.swift in Sources */,
+				1DCAA0502543286600E21A54 /* User.swift in Sources */,
 				1DCA9FDD254284A000E21A54 /* UserInfoView.swift in Sources */,
 				1DCAA03D2543024000E21A54 /* APIResponse.swift in Sources */,
 				1DCA9FC9254274BC00E21A54 /* DashBoardViewController.swift in Sources */,

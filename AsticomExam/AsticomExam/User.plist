@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>id</key>
+	<string>1</string>
+	<key>first_name</key>
+	<string>Juan</string>
+	<key>last_name</key>
+	<string>Santos</string>
+	<key>mobile</key>
+	<string>09171234567</string>
+	<key>referral_code</key>
+	<string>abc-defg</string>
+	<key>is_verified</key>
+	<true/>
+</dict>
+</plist>

@@ -9,14 +9,12 @@ import UIKit
 
 class UserInfoView: UIView {
     
-    private var userName: String?
-    private var mobileNumber: String?
-    private var referalCode: String?
+    private var user: User?
     
     private lazy var userNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = userName
+        label.text = "\(user?.first_name ?? "") \(user?.last_name ?? "")"
         label.font = .systemFont(ofSize: 38)
         label.textAlignment = .center
         label.textColor = .white
@@ -26,17 +24,17 @@ class UserInfoView: UIView {
     private lazy var mobileNumberLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = mobileNumber
+        label.text = user?.mobile ?? ""
         label.font = .systemFont(ofSize: 24)
         label.textAlignment = .center
         label.textColor = .white
         return label
     }()
     
-    private lazy var referalCodeLabel: UILabel = {
+    private lazy var referralCodeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = referalCode
+        label.text = user?.referral_code ?? ""
         label.font = .systemFont(ofSize: 24)
         label.textAlignment = .center
         label.textColor = .white
@@ -53,15 +51,13 @@ class UserInfoView: UIView {
         
         stackView.addArrangedSubview(userNameLabel)
         stackView.addArrangedSubview(mobileNumberLabel)
-        stackView.addArrangedSubview(referalCodeLabel)
+        stackView.addArrangedSubview(referralCodeLabel)
         
         return stackView
     }()
     
-    init(userName: String, mobileNumber: String, referalCode: String) {
-        self.userName = userName
-        self.mobileNumber = mobileNumber
-        self.referalCode = referalCode
+    init(user: User) {
+        self.user = user
         super.init(frame: CGRect.zero)
         setupUI()
     }
