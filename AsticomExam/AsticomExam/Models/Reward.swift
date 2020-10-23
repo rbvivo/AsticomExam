@@ -6,7 +6,7 @@
 //
 
 typealias RewardList = [Reward]
-class Reward: Codable {
+struct Reward: Codable {
     let id: Int
     let name: String
     let image: String

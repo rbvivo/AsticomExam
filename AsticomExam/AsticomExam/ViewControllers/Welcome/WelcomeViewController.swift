@@ -28,7 +28,7 @@ class WelcomeViewController: UIViewController {
         button.setTitle("Login", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .blue
-        button.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
+        button.addTarget(self, action: #selector(goToDashboard), for: .touchUpInside)
         return button
     }()
     
@@ -69,7 +69,7 @@ class WelcomeViewController: UIViewController {
     }
     
     @objc private func goToDashboard() {
-       /* let dashboardController = DashBoardViewController(viewModel: viewmodel )
-        self.navigationController?.pushViewController(dashboardController, animated: true)*/
+        let dashboardController = DashBoardViewController(viewModel: DashboardViewModel(userName: "NAme", mobileNumber: "1111", referalCode: "1234") )
+        self.navigationController?.pushViewController(dashboardController, animated: true)
     }
 }

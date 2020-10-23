@@ -51,6 +51,11 @@ class DashBoardViewController: UIViewController {
         setupUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     private func setupUI() {
         view.backgroundColor = .white
         view.addSubview(userInfoView)
@@ -81,5 +86,8 @@ extension DashBoardViewController: UICollectionViewDelegate, UICollectionViewDat
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let rewardDetailsController = RewardDetailsViewController(viewModel: RewardDetailsViewModel(reward: viewModel.rewardList[indexPath.row]))
+        self.navigationController?.pushViewController(rewardDetailsController, animated: true)
+    }
 }

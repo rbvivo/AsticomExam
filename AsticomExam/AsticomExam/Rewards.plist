@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>id</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>Jolibee Off</string>
+		<key>image</key>
+		<string>https://www.manilaonsale.com/wp-content/uploads/2020/10/Jolibee-Exclusive-App-Promo-2020-poster-fb-800x419.jpg</string>
+		<key>description</key>
+		<string>Get 50 pesos off</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>2</integer>
+		<key>name</key>
+		<string>Shopee Sale</string>
+		<key>image</key>
+		<string>https://shopee.ph/blog/wp-content/uploads/2019/04/shopee-55-double-double-sale-1280x720.jpg</string>
+		<key>description</key>
+		<string>5.5 Sale</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>3</integer>
+		<key>name</key>
+		<string>Lazada Free Shipping</string>
+		<key>image</key>
+		<string>https://1.bp.blogspot.com/-32etIk-NzLU/XtM9mgc-hZI/AAAAAAAAHfA/teBNZBu8T_4uKij1mdDD5QBZyq6VpNmKACLcBGAsYHQ/s640/lazada-6-6-sale-2020.png</string>
+		<key>description</key>
+		<string>Lazada Free Shipping</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>4</integer>
+		<key>name</key>
+		<string>Mcdo Sale</string>
+		<key>image</key>
+		<string>https://www.manilaonsale.com/wp-content/uploads/2020/07/McDonalds-e1593833721836.jpg</string>
+		<key>description</key>
+		<string>Save 78 pesos</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>5</integer>
+		<key>name</key>
+		<string>Jolibee Off</string>
+		<key>image</key>
+		<string>https://www.manilaonsale.com/wp-content/uploads/2020/10/Jolibee-Exclusive-App-Promo-2020-poster-fb-800x419.jpg</string>
+		<key>description</key>
+		<string>Get 50 pesos off</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>6</integer>
+		<key>name</key>
+		<string>Coffee Sale</string>
+		<key>image</key>
+		<string>https://d1csarkz8obe9u.cloudfront.net/posterpreviews/coffee-advertisement-sale-design-template-9d5c05cbcd2994985fcdfa0bb3e60bf2_screen.jpg?ts=1580662788</string>
+		<key>description</key>
+		<string>10% off</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>7</integer>
+		<key>name</key>
+		<string>Yellow Cab Buy 1 Take 1</string>
+		<key>image</key>
+		<string>https://cdn1.clickthecity.com/images/articles/content/5dd64e262b4e92.95293848.jpg</string>
+		<key>description</key>
+		<string>Buy 1 Take 1</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>8</integer>
+		<key>name</key>
+		<string>Starbucks Buy 1 Take 1</string>
+		<key>image</key>
+		<string>https://www.manilaonsale.com/wp-content/uploads/2020/06/starbucks-promo-2020-poster.jpg</string>
+		<key>description</key>
+		<string>Buy 1 Take 1</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>9</integer>
+		<key>name</key>
+		<string>Air Asia Buy 1 Take 1</string>
+		<key>image</key>
+		<string>https://images.squarespace-cdn.com/content/5a5dbe4632601eb31977f947/1599539320471-0FSO6IEGVEVS0UWD50D2/Screen+Shot+2020-09-08+at+12.28.20+PM.png?content-type=image%2Fpng</string>
+		<key>description</key>
+		<string>Buy 1 Take 1</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>10</integer>
+		<key>name</key>
+		<string>Sports Central</string>
+		<key>image</key>
+		<string>https://images.summitmedia-digital.com/spotph/images/2020/01/08/sports-central-eoss--1578453379.jpg</string>
+		<key>description</key>
+		<string>Sale</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>11</integer>
+		<key>name</key>
+		<string>SM Shoes and Bags Sale</string>
+		<key>image</key>
+		<string>https://www.manilaonsale.com/wp-content/uploads/2020/09/SM-Shoes-and-Bags-Vans-Live-Sale-800x532.jpg</string>
+		<key>description</key>
+		<string>50% off</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>12</integer>
+		<key>name</key>
+		<string>Pizza Hut Triple Pizza</string>
+		<key>image</key>
+		<string>https://1.bp.blogspot.com/-vpWxe0-IGTc/XdR98xGCK0I/AAAAAAABTuE/nwwwX7Q9-qQ1qhQflqxfLgl51hki0WChACLcBGAsYHQ/s1600/72466389_10156435097436175_6718229960852504576_o.jpg</string>
+		<key>description</key>
+		<string>699 3 Regular Pizzas</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>13</integer>
+		<key>name</key>
+		<string>Dominos Buy 1 Get 1</string>
+		<key>image</key>
+		<string>https://static.wixstatic.com/media/5de796_7267e17463b64b70930aae77d66ddcae~mv2.jpg/v1/fill/w_960,h_960,al_c,q_90/5de796_7267e17463b64b70930aae77d66ddcae~mv2.jpg</string>
+		<key>description</key>
+		<string>Buy 1 Get 1</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>14</integer>
+		<key>name</key>
+		<string>Amazon Free Shipping</string>
+		<key>image</key>
+		<string>https://images-fe.ssl-images-amazon.com/images/G/35/dex/2019/DEX_2019_CFS_LP_Hero_Mobile_750x645.jpg</string>
+		<key>description</key>
+		<string>Free Shipping</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>15</integer>
+		<key>name</key>
+		<string>Trip.com Vouchers</string>
+		<key>image</key>
+		<string>https://dimg04.c-ctrip.com/images/0a12p1200082gehc48407.jpg</string>
+		<key>description</key>
+		<string>Hotel Vouchers</string>
+	</dict>
+</array>
+</plist>

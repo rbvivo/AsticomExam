@@ -9,11 +9,13 @@ import UIKit
 
 class RewardCollectionViewCell: UICollectionViewCell {
     
+    private var viewModel: RewardCollectionViewModel?
+    
     private lazy var rewardImage: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
-      
+        imageView.clipsToBounds = true
         return imageView
     }()
     
@@ -25,7 +27,8 @@ class RewardCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    func configure(reward: Reward) {
+    func configure(reward: Reward, viewModel: RewardCollectionViewModel = RewardCollectionViewModel()) {
+        self.viewModel = viewModel
         contentView.backgroundColor = .white
         contentView.layer.borderColor = UIColor.gray.cgColor
         contentView.layer.borderWidth = 1
@@ -48,5 +51,38 @@ class RewardCollectionViewCell: UICollectionViewCell {
         }
         
         rewardTitle.text = reward.name
+        if let url = URL(string: reward.image) {
+            viewModel.loadImage(imageURL: url)
+        }
+       
+        viewModel.fetchImageComplete = { [weak self] data in
+            self?.rewardImage.image = UIImage(data: data)
+        }
+        
+        viewModel.fetchImageFailed = { [weak self] in
+            self?.rewardImage.image = nil
+        }
+    }
+}
+
+
+class RewardCollectionViewModel {
+    let rewardServiceProviding: RewardServiceProviding
+    var fetchImageComplete: ((_ data: Data) -> Void)?
+    var fetchImageFailed: (() -> Void)?
+ 
+    init(rewardServiceProviding: RewardServiceProviding = RewardService()) {
+        self.rewardServiceProviding = rewardServiceProviding
+    }
+    
+    func loadImage(imageURL: URL) {
+        rewardServiceProviding.getImage(imageUrl: imageURL, completion: { [weak self] response in
+            switch response {
+            case .success(let data):
+                self?.fetchImageComplete?(data)
+            case .failure(_):
+                self?.fetchImageFailed?()
+            }
+        })
     }
 }
