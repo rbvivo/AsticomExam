@@ -60,9 +60,9 @@ class RewardDetailsViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             rewardImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            rewardImage.heightAnchor.constraint(equalToConstant: 120),
-            rewardImage.widthAnchor.constraint(equalToConstant: 320),
-            rewardImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            rewardImage.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            rewardImage.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            rewardImage.heightAnchor.constraint(equalTo: rewardImage.widthAnchor, multiplier: 9.0/16.0),
             
             rewardTitle.topAnchor.constraint(equalTo: rewardImage.bottomAnchor, constant: 20),
             rewardTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
@@ -71,6 +71,7 @@ class RewardDetailsViewController: UIViewController {
             rewardDescription.topAnchor.constraint(equalTo: rewardTitle.bottomAnchor, constant: 20),
             rewardDescription.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             rewardDescription.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            
         ])
      
         rewardTitle.text = viewModel.reward.name

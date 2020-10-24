@@ -40,8 +40,7 @@ class RewardCollectionViewCell: UICollectionViewCell {
                 rewardImage.topAnchor.constraint(equalTo: contentView.topAnchor),
                 rewardImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
                 rewardImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-                rewardImage.heightAnchor.constraint(equalToConstant: 120),
-                rewardImage.widthAnchor.constraint(equalToConstant: 320),
+                rewardImage.heightAnchor.constraint(equalTo: rewardImage.widthAnchor, multiplier: 9.0/16.0),
                 
                 rewardTitle.topAnchor.constraint(equalTo: rewardImage.bottomAnchor, constant: 20),
                 rewardTitle.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),

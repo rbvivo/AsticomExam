@@ -15,7 +15,9 @@ class DashBoardViewController: UIViewController {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.minimumLineSpacing = 8
         flowLayout.minimumInteritemSpacing = 4
-        flowLayout.estimatedItemSize = CGSize(width: 320, height: 200)
+        let cellWidth = UIScreen.main.bounds.width - (flowLayout.minimumLineSpacing * 2)
+        let textHeight = CGFloat(80)
+        flowLayout.itemSize = CGSize(width: cellWidth, height: (cellWidth * 9.0/16.0) + textHeight)
         flowLayout.sectionInset = UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 8)
         return flowLayout
 
